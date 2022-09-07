@@ -36,6 +36,8 @@ class Polinomio:
             return Polinomio(
                 a + b for a, b in zip_longest(self.coefs, value.coefs, fillvalue=0)
             )
+        
+        return NotImplemented
     
     def __mul__(self, value: Any):
         if isinstance(value, Polinomio):
@@ -52,6 +54,8 @@ class Polinomio:
             return Polinomio(
                 coef * value for coef in self.__coefs
             )
+
+        return NotImplemented
     
     def __rmul__(self, value: Any):
         return self.__mul__(value)
@@ -59,6 +63,8 @@ class Polinomio:
     def __eq__(self, value: Any):
         if isinstance(value, Polinomio):
             return self.coefs == value.coefs
+        
+        return NotImplemented
     
     def __repr__(self):
         return f"Polinomio(coefs={self.coefs})"
