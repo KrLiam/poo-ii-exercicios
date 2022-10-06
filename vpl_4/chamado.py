@@ -14,12 +14,40 @@ class Chamado(AbstractChamado):
         titulo: str,
         descricao: str,
         prioridade: int,
-        tipo: TipoChamado
+        tipo: TipoChamado,
     ):
-        self.data = data
-        self.cliente = cliente
-        self.tecnico = tecnico
-        self.titulo = titulo
-        self.descricao = descricao
-        self.prioridade = prioridade
-        self.tipo = tipo
+        self.__data = data
+        self.__cliente = cliente
+        self.__tecnico = tecnico
+        self.__titulo = titulo
+        self.__descricao = descricao
+        self.__prioridade = prioridade
+        self.__tipo = tipo
+    
+    @property
+    def data(self):
+        return self.__data
+    
+    @property
+    def cliente(self):
+        return self.__cliente
+    
+    @property
+    def tecnico(self):
+        return self.__tecnico
+    
+    @property
+    def titulo(self):
+        return self.__titulo
+    
+    @property
+    def descricao(self):
+        return self.__descricao
+    
+    @property
+    def prioridade(self):
+        return self.__prioridade
+    
+    @property
+    def tipo(self):
+        return self.__tipo
